@@ -457,17 +457,15 @@ function drawBoard(){
   var yoff_m = (minimap.height / 2) % zoomlevel - zoomlevel;
   var z = zoomlevel;
 
+  ctx_minimap_board.fillStyle = "rgba(0,0,0,0.75)";
+  
   for (var x = 0; x <= bw; x += z) {
-      ctx_minimap_board.moveTo(x + xoff_m, yoff_m);
-      ctx_minimap_board.lineTo(x + xoff_m, bh + yoff_m);
+    ctx_minimap_board.fillRect(x +  xoff_m, yoff_m, 1, bh);
   }
 
-  for (var x = 0; x <= bh; x += z) {
-      ctx_minimap_board.moveTo(xoff_m, x + yoff_m);
-      ctx_minimap_board.lineTo(bw + xoff_m, x + yoff_m);
+  for (var y = 0; y <= bh; y += z) {
+    ctx_minimap_board.fillRect(xoff_m, y + yoff_m, bw, 1);
   }
-  ctx_minimap_board.strokeStyle = "black";
-  ctx_minimap_board.stroke();
 }
 
 
