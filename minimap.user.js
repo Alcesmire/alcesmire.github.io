@@ -102,6 +102,7 @@ cssStyle = `
 /*
   Some customizations of the UI, remove if you want the old look
  */
+
 #colors {
   margin-left: 0.333em !important;
 }
@@ -368,10 +369,10 @@ function loadTemplates(){
   if(template_list == null)
     return;
 
-  var x_left   = x_window - minimap.width  / zoomlevel / 2;
-  var x_right  = x_window + minimap.width  / zoomlevel / 2;
-  var y_top    = y_window - minimap.height / zoomlevel / 2;
-  var y_bottom = y_window + minimap.height / zoomlevel / 2;
+  var x_left   = x_window*1 - minimap.width  / zoomlevel / 2;
+  var x_right  = x_window*1 + minimap.width  / zoomlevel / 2;
+  var y_top    = y_window*1 - minimap.height / zoomlevel / 2;
+  var y_bottom = y_window*1 + minimap.height / zoomlevel / 2;
   
   var keys = [];
   for(var k in template_list) keys.push(k);
@@ -379,10 +380,10 @@ function loadTemplates(){
   
   for(var i = 0; i < keys.length; i++) {
     template = keys[i];
-    var temp_x  = template_list[template]["x"];
-    var temp_y  = template_list[template]["y"];
-    var temp_xr = template_list[template]["x"] + template_list[template]["width"]*1;
-    var temp_yb = template_list[template]["y"] + template_list[template]["height"]*1;
+    var temp_x  = template_list[template]["x"]*1;
+    var temp_y  = template_list[template]["y"]*1;
+    var temp_xr = template_list[template]["x"]*1 + template_list[template]["width"]*1;
+    var temp_yb = template_list[template]["y"]*1 + template_list[template]["height"]*1;
     if ( temp_xr < x_left || temp_yb < y_top || temp_x >= x_right || temp_y >= y_bottom)
       continue
     //console.log(" Template " + template + " is in range!");
@@ -513,3 +514,4 @@ function findCoor(){
     }
   });
 }
+
