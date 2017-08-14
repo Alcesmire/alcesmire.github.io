@@ -450,6 +450,7 @@ function drawBoard(){
   
   if (zoomlevel <= 4.6 || !toggle_grid)
     return;
+  
   ctx_minimap_board.beginPath();
   var bw = minimap_board.width + zoomlevel;
   var bh = minimap_board.height + zoomlevel;
