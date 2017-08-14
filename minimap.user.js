@@ -201,6 +201,11 @@ window.addEventListener('load', function() {
   ctx_minimap.webkitImageSmoothingEnabled = false;
   ctx_minimap.msImageSmoothingEnabled = false;
   ctx_minimap.imageSmoothingEnabled = false;
+  
+  ctx_minimap_board.mozImageSmoothingEnabled = false;
+  ctx_minimap_board.webkitImageSmoothingEnabled = false;
+  ctx_minimap_board.msImageSmoothingEnabled = false;
+  ctx_minimap_board.imageSmoothingEnabled = false;
 
   drawBoard();
   drawCursor();
