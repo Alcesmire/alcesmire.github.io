@@ -130,7 +130,7 @@ htmlFragment = `
       |
       <span class="map-clickable" id="follow-mouse">Follow Mouse</span>
       |
-      <span class="map-clickable" id="toggle-grid">Toggle grid</span>
+      <span class="map-clickable" id="toggle-grid">Toggle Grid</span>
       |
       Zoom:
       <span class="map-clickable map-zoom" id="zoom-plus">+</span>
